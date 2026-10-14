@@ -13,11 +13,11 @@
 (function () {
     'use strict';
 
-    const TARGET_RATE = 3.0;
+    const PLAYBACK_RATE = 3.0;
 
     function applySpeed(video) {
-        if (video.playbackRate !== TARGET_RATE) {
-            video.playbackRate = TARGET_RATE;
+        if (video.playbackRate !== PLAYBACK_RATE) {
+            video.playbackRate = PLAYBACK_RATE;
         }
     }
 
@@ -41,9 +41,9 @@
         (e) => {
             if (
                 e.target.tagName === 'VIDEO' &&
-                e.target.playbackRate !== TARGET_RATE
+                e.target.playbackRate !== PLAYBACK_RATE
             ) {
-                e.target.playbackRate = TARGET_RATE;
+                e.target.playbackRate = PLAYBACK_RATE;
             }
         },
         true,
